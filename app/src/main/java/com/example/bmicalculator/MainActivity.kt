@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     fun setStatus(view: View) {
         val height = binding.txtHeight.text.toString()
         val weight = binding.txtWeight.text.toString()
