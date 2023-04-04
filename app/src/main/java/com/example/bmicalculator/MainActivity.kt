@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.example.bmicalculator.databinding.ActivityMainBinding
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding.heightUnit.text = ".m"
 
         binding.CVResult.visibility = View.INVISIBLE
+
 
 
     }
@@ -42,13 +44,20 @@ class MainActivity : AppCompatActivity() {
 
 
     fun setStatus(view: View) {
+        binding.CVResult.visibility = View.INVISIBLE
+
         val height = binding.txtHeight.text.toString()
         val weight = binding.txtWeight.text.toString()
+
         if (height == "" && weight == ""){
             Toast.makeText(this, "Weight and height cannot be left empty",Toast.LENGTH_LONG).show()
+        }else if( height.toDouble() > 8.0){
+            Toast.makeText(this, "Damm bruv u ain't that tall",Toast.LENGTH_LONG).show()
         }else{
+
             val bmi =  calculateBMI(weight.toDouble(), height.toDouble())
-            binding.txtResult.text = bmi.toString()
+            val twoDpBmi = String.format("%.2f",bmi)
+            binding.txtResult.text = "$twoDpBmi kg/m^2"
 
             if (bmi < 18.4){
                 showResult("Underweight")
