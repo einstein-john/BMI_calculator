@@ -11,4 +11,7 @@
     <color name="accent">#c2d5db</color>
     <color name="background">#2A3759</color>
     <color name="secondary">#778FD2</color>
+    <color name="red">#980804</color>
+    <color name="green">#3d7c4d</color>
+    <color name="yellow">#ffd966</color>
 </resources>
