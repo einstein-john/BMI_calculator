@@ -80,5 +80,6 @@ class MainActivity : AppCompatActivity() {
         if (imm.isAcceptingText) {
             // Hide the keyboard
             imm.hideSoftInputFromWindow(view.windowToken, 0)
+        }
     }
 }
