@@ -71,5 +71,14 @@ class MainActivity : AppCompatActivity() {
         }
         binding.txtWeight.text.clear()
         binding.txtHeight.text.clear()
+        
+        //TODO drop the keyboard when btnCalculate is clicked
+        // Get a reference to the InputMethodManager
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+// Check if the keyboard is currently shown
+        if (imm.isAcceptingText) {
+            // Hide the keyboard
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
