@@ -220,7 +220,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="1dp"
                 android:textAlignment="center"
-                android:text="normal weight (18.5 to 24.9)"
+                android:text="normal BMI is (18.5 to 24.9)"
                 android:textAllCaps="true"
                 android:textColor="@color/background"
                 android:textSize="18sp"
